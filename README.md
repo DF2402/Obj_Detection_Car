@@ -11,4 +11,5 @@ Different process will send a command to drive the motors to go forward or make 
 ## Car view 
 
 ![car](resource/car.png)
+
 This car uses a 3d printing catching hook and it is driven by two motors.
