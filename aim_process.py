@@ -5,7 +5,20 @@ class aim_process(process.process):
     def __init__(self):
         super().__init__()
 
+<<<<<<< HEAD
     def run(self,area,cx,parameters):
+=======
+    
+    def run(self,area,cx,parameters):
+        # this function is used to calculate the left and right output speed of the robot based on the area and cx value.
+        # cx is the distance from center x coordinate of the object, which is used to determine the direction of the robot's movement.
+        # area is the area of the object, which is used to determine the speed of the robot.
+        # parameters is a tuple containing the following values:
+        # diff_speed_limit: the maximum speed difference between the left and right wheels of the robot.
+        # left_ratio: the ratio of the left wheel speed to the maximum speed of the robot.
+        # right_ratio: the ratio of the right wheel speed to the maximum speed of the robot.
+        # base_speed: the base speed of the robot.
+>>>>>>> d32c241 (final code)
 
         left_ouput, right_ouput = (0,0)
         
@@ -15,6 +28,7 @@ class aim_process(process.process):
         
         # when the ball at left , cx < 0，and right ratio need to be oppsite  
         right_ratio *= -1
+<<<<<<< HEAD
         """
         if area <= 160000:
             forward_speed = base_speed_limit
@@ -23,6 +37,8 @@ class aim_process(process.process):
         else:
             forward_speed = base_speed
         """   
+=======
+>>>>>>> d32c241 (final code)
 
         forward_speed = base_speed
         left_ouput  = min(int(diff_speed * left_ratio  + forward_speed ) ,100)
@@ -30,7 +46,11 @@ class aim_process(process.process):
         right_ouput = min(int(diff_speed * right_ratio + forward_speed ) ,100)
 
         return (left_ouput, right_ouput)
+<<<<<<< HEAD
     
+=======
+    # this function is used to calculate the left and right output speed of the robot based on the area and cx value.
+>>>>>>> d32c241 (final code)
     def test(self, run_test_set_path, change_test_set_path, run_parameters,decision_parameters, left_bias=0, right_bias=0):
         print('aim_process run() unit test')
         df = pd.read_csv(run_test_set_path)

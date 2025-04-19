@@ -1,4 +1,9 @@
 import pandas as pd
+<<<<<<< HEAD
+=======
+# This is a base class for process handling
+# It is designed to be inherited by other classes that implement specific process logic.
+>>>>>>> d32c241 (final code)
 class process:
     def __init__(self):
         pass

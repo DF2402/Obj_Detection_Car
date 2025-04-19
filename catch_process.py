@@ -6,7 +6,19 @@ class catch_process(process.process):
         super().__init__()
 
     def run(self,area,cx,parameters):
+<<<<<<< HEAD
 
+=======
+        # this function is used to calculate the left and right output speed of the robot based on the area and cx value.
+        # cx is the distance from center x coordinate of the object, which is used to determine the direction of the robot's movement.
+        # area is the area of the object, which is used to determine the speed of the robot.
+        # parameters is a tuple containing the following values:
+        # diff_speed_limit: the maximum speed difference between the left and right wheels of the robot.
+        # left_ratio: the ratio of the left wheel speed to the maximum speed of the robot.
+        # right_ratio: the ratio of the right wheel speed to the maximum speed of the robot.
+        # base_speed: the base speed of the robot.
+        
+>>>>>>> d32c241 (final code)
         left_ouput, right_ouput = (0,0)
         
         diff_speed_limit,left_ratio,right_ratio, base_speed,base_speed_limit,slow_ratio = parameters
@@ -89,10 +101,17 @@ class catch_process(process.process):
         print(f"pass:{cnt_pass}, fail:{cnt_fail}")
         
     
+<<<<<<< HEAD
     def state_change(self,area,cx,parameters=(160000,300)):
         decision_area, decision_dcx = parameters
         cx = abs(cx)
         if (decision_area <= area and decision_dcx >= cx ):
+=======
+    def state_change(self,sx,cx,parameters=(160000,300)):
+        decision_sx, decision_dcx = parameters
+        cx = abs(cx)
+        if (decision_sx <= sx and decision_dcx >= cx ):
+>>>>>>> d32c241 (final code)
             return True
         return False
         
