@@ -13,3 +13,5 @@ Different process will send a command to drive the motors to go forward or make 
 ![car](resource/car.png)
 
 This car uses a 3d printing catching hook and it is driven by two motors.
+
+[video of how the car handle the task](https://youtu.be/puK-e729DAQ)
